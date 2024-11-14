@@ -8,11 +8,13 @@ Sqrt1(7);  -> error
 
 */
 
+// Function Declaration :
 function Sqrt(n) {
   console.log("Squrt= ", Math.sqrt(n));
   return;
 }
 
+// Function Expression :
 var Sqrt1 = function (n) {
   console.log("Squrt1= ", Math.sqrt(n));
   return;
