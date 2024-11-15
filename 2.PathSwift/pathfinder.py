@@ -18,13 +18,13 @@ window=pygame.display.set_mode((window_width,window_height))
 
 def main() :
     while 1 :
-        for event in pygame.event.get():
+        for event in pygame.event.get(): #r etrieves all the events happening in the game window
             # for quit : 
-            if event.type==pygame.QUIT:
-                pygame.quit()
-                sys.exit()
-        window.fill(0,0,0)
-        pygame.display.flip()
+            if event.type==pygame.QUIT: # if the event type is QUIT ( if the user clicks the close button on the window )
+                pygame.quit() # Closes the game window and cleans up all resources used by pygame
+                sys.exit() # Exits the program entirely.
+        window.fill(0,0,0) # This fills the game window with a solid color
+        pygame.display.flip() # updates the game window with the new changes
         
         
 
