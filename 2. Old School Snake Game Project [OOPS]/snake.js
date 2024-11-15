@@ -19,6 +19,9 @@ pen.fillRect(30, 30, 30, 30);
 
 // implementing game-loop function : (move the obj until game over)
 
+//Prac :
+/*
+
 function init() {
   console.log("in init");
   canvas = document.getElementById("mycanvas");
@@ -65,3 +68,19 @@ function game_loop() {
 
 init();
 f = setInterval(game_loop, 100);
+
+
+*/
+
+function init() {
+  canvas = document.getElementById("mycanvas");
+}
+
+function draw() {}
+
+function update() {}
+
+function gameLoop() {
+  draw();
+  update();
+}
