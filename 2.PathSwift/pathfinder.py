@@ -14,6 +14,33 @@ window_height=500
 #creates the game window using pygame. The set_mode function takes a tuple (width, height) to specify the window's dimensions
 window=pygame.display.set_mode((window_width,window_height))
 
+columns=25
+rows=25
+box_width=window_width//columns
+box_height=window_height//rows
+
+
+grid=[]
+
+
+class Box:
+    def __init__(self,i,j):
+        self.x=i
+        self.y=j
+        
+    def draw(self,win,colour):
+        pygame.draw.rect(win,colour,(self.x*box_width,self.y*box_height, box_width-2,box_height-2))
+        
+
+# create Grid : 
+
+for i in range(columns):
+    arr=[]
+    for j in range(rows):
+        arr.append(Box(i,j))
+    grid.append(arr)
+    
+
 
 
 def main() :
@@ -23,7 +50,14 @@ def main() :
             if event.type==pygame.QUIT: # if the event type is QUIT ( if the user clicks the close button on the window )
                 pygame.quit() # Closes the game window and cleans up all resources used by pygame
                 sys.exit() # Exits the program entirely.
-        window.fill(0,0,0) # This fills the game window with a solid color
+        window.fill((0,0,0)) # This fills the game window with a solid color
+        
+        for i in range(columns):
+            for j in range(rows):
+                box=grid[i][j]
+                box.draw(window,(50,50,50))
+    
+        
         pygame.display.flip() # updates the game window with the new changes
         
         
