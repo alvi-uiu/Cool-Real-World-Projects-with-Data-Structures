@@ -73,13 +73,19 @@ f = setInterval(game_loop, 100);
 */
 
 function init() {
-  canvas = document.getElementById("mycanvas");
+  var canvas = document.getElementById("mycanvas");
+  w = canvas.width = 1000;
+  h = canvas.height = 1000;
+  pen = canvas.getContext("2d");
+
+  snake = {};
 }
 
 function draw() {}
 
 function update() {}
 
+init();
 function gameLoop() {
   draw();
   update();
