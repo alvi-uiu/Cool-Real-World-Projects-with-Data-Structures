@@ -23,5 +23,5 @@ const Edges = [
   [4, 2, 1],
 ];
 
-const graph = createGraph(V, Edges);
-console.log(graph);
+const Graph = createGraph(V, Edges);
+console.log(Graph);
